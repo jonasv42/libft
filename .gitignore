@@ -4,3 +4,4 @@ make2
 main.c
 libftTester
 *.swp
+*.o
