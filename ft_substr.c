@@ -6,7 +6,7 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 16:37:50 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/08 16:55:51 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/11 16:36:48 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start > buffer)
 	{
 		substr = malloc(1);
+		if (!substr)
+			return (NULL);
 		substr[0] = '\0';
 		return (substr);
 	}
@@ -31,6 +33,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else
 		buffer = len + 1;
 	substr = malloc(buffer);
+	if (!substr)
+		return (NULL);
 	i = 0;
 	while (i < len && s[start + i] != '\0')
 	{

@@ -6,7 +6,7 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 20:16:12 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/08 16:13:38 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/11 19:26:49 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (nmemb > 2147483647 || size > 2147483647 || nmemb * size > 2147483647)
 		return (NULL);
 	alloc_mem = malloc(nmemb * size);
+	if (!alloc_mem)
+		return (NULL);
+	ft_bzero(alloc_mem, nmemb *size);
 	return (alloc_mem);
 }

@@ -6,7 +6,7 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 16:41:25 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/08 16:52:45 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/11 16:33:54 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ char	**ft_split(char const *s, char c)
 
 	parts = check_parts(s, c);
 	str = malloc(sizeof(char *) * (parts + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (*s)
 	{

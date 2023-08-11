@@ -6,7 +6,7 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:58:26 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/08 16:45:21 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/11 18:15:35 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	ssize_t	bytes_written;
-
-	bytes_written = write(fd, &c, 1);
+	write(fd, &c, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 20:19:52 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/08 16:22:06 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/11 16:15:04 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,23 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	destination = (char *)dest;
 	source = (char *)src;
-	i = n;
-	while (i > 0)
+	if (destination < source)
 	{
-		i--;
-		destination[i] = source[i];
+		i = 0;
+		while (i < n)
+		{
+			destination[i] = source[i];
+			i++;
+		}
+	}
+	if (destination > source)
+	{
+	i = n;
+		while (i > 0)
+		{
+			i--;
+			destination[i] = source[i];
+		}
 	}
 	return (destination);
 }

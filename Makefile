@@ -6,7 +6,7 @@
 #    By: jvets <jvets@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 13:05:43 by jvets             #+#    #+#              #
-#    Updated: 2023/08/10 22:15:54 by jvets            ###   ########.fr        #
+#    Updated: 2023/08/11 19:12:53 by jvets            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ bonus: $(BONUSOBJECTS)
 clean:
 	rm -f *.o
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all

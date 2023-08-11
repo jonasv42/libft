@@ -6,7 +6,7 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 16:39:15 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/08 16:39:48 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/11 16:32:47 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	buffer = ft_strlen(s1) + ft_strlen(s2) + 1;
 	str = malloc(buffer);
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (*s1)
 	{

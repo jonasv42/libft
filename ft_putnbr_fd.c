@@ -6,7 +6,7 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 17:50:32 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/08 16:58:20 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/11 17:04:45 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,12 @@ static int	static_intlen(long int nbr)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ssize_t		bytes_written;
 	char		*s;
 	long int	nbr;
 
 	s = ft_itoa(n);
 	nbr = n;
 	nbr = static_intlen(nbr);
-	bytes_written = write(fd, s, nbr);
+	write(fd, s, nbr);
 	free(s);
 }

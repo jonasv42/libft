@@ -6,7 +6,7 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:15:03 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/08 16:45:54 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/11 19:37:28 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	ssize_t	bytes_written;
+	size_t	len;
 
-	while (*s)
-	{
-		bytes_written = write(fd, s, 1);
-		s++;
-	}
+	len = ft_strlen(s);
+	write(fd, s, len);
+	s++;
 }
