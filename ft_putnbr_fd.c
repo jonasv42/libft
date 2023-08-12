@@ -6,40 +6,29 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 17:50:32 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/11 17:04:45 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/11 20:25:49 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	static_intlen(long int nbr)
-{
-	int	len;
-
-	len = 0;
-	if (nbr == 0)
-		return (1);
-	if (nbr < 0)
-	{
-		len++;
-		nbr *= -1;
-	}
-	while (nbr)
-	{
-		nbr /= 10;
-		len++;
-	}
-	return (len);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
-	char		*s;
 	long int	nbr;
 
-	s = ft_itoa(n);
 	nbr = n;
-	nbr = static_intlen(nbr);
-	write(fd, s, nbr);
-	free(s);
+	if (nbr < 0)
+	{
+		nbr *= -1;
+		ft_putchar_fd('-', fd);
+	}
+	if (nbr > 9)
+	{
+		ft_putnbr_fd((int)(nbr / 10), fd);
+		ft_putchar_fd(nbr % 10 + '0', fd);
+	}
+	else
+	{
+		ft_putchar_fd(nbr % 10 + '0', fd);
+	}
 }

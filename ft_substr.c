@@ -6,11 +6,20 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 16:37:50 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/11 16:36:48 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/11 21:57:50 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	*start_after_string(char **substr)
+{
+	*substr = malloc(1);
+	if (!*substr)
+		return (NULL);
+	(*substr)[0] = '\0';
+	return (*substr);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -20,13 +29,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	buffer = ft_strlen(s);
 	if (start > buffer)
-	{
-		substr = malloc(1);
-		if (!substr)
-			return (NULL);
-		substr[0] = '\0';
-		return (substr);
-	}
+		return (start_after_string(&substr));
 	buffer -= start;
 	if (buffer < len)
 		buffer++;

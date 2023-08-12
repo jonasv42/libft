@@ -6,7 +6,7 @@
 #    By: jvets <jvets@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 13:05:43 by jvets             #+#    #+#              #
-#    Updated: 2023/08/11 19:12:53 by jvets            ###   ########.fr        #
+#    Updated: 2023/08/11 20:53:34 by jvets            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,9 @@ SOURCES += ./ft_atoi.c ./ft_strdup.c ./ft_bzero.c ./ft_strjoin.c ./ft_substr.c
 SOURCES += ./ft_strtrim.c ./ft_itoa.c ./ft_putchar_fd.c ./ft_putstr_fd.c ./ft_putendl_fd.c
 SOURCES += ./ft_putnbr_fd.c ./ft_strmapi.c ./ft_striteri.c ./ft_split.c
 
-BONUSSOURCES = ./ft_lstsize_bonus.c ./ft_lstnew_bonus.c ./ft_lstadd_front_bonus.c
-BONUSSOURCES += ./ft_lstlast_bonus.c ./ft_lstadd_back.c ./ft_lstdelone_bonus.c
-BONUSSOURCES += ./ft_lstclear_bonus.c ./ft_lstiter.c ./ft_lstmap_bonus.c
+BONUSSOURCES = ./ft_lstsize.c ./ft_lstnew.c ./ft_lstadd_front.c
+BONUSSOURCES += ./ft_lstlast.c ./ft_lstadd_back.c ./ft_lstdelone.c
+BONUSSOURCES += ./ft_lstclear.c ./ft_lstiter.c ./ft_lstmap.c
 
 OBJECTS = $(SOURCES:%.c=%.o)
 

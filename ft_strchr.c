@@ -6,7 +6,7 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 15:00:09 by jvets             #+#    #+#             */
-/*   Updated: 2023/07/28 19:00:16 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/11 19:56:42 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return (str);
 		str++;
 	}
-	if (*str == c)
+	if (*str == (unsigned char)c)
 		return (str);
 	return (NULL);
 }
