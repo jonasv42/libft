@@ -6,7 +6,7 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 11:44:28 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/08 16:26:58 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/12 16:00:37 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	while (*dst)
 	{
 		dst++;
-		if (size > 0)
-			size--;
+		size--;
 	}
 	while (*src && size-- > 1)
 		*dst++ = *src++;

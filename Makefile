@@ -6,7 +6,7 @@
 #    By: jvets <jvets@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 13:05:43 by jvets             #+#    #+#              #
-#    Updated: 2023/08/11 20:53:34 by jvets            ###   ########.fr        #
+#    Updated: 2023/08/12 19:26:03 by jvets            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 
 %.o: %.c libft.h
-	gcc $(FLAGS) -c $< -o $@
+	cc $(FLAGS) -c $< -o $@
 	ar -rcs $(NAME) $@
 
 bonus: $(BONUSOBJECTS)

@@ -6,13 +6,13 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 21:59:27 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/08 16:43:19 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/12 18:43:34 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	static_intlen(long int nbr)
+static int	int_len(long int nbr)
 {
 	int	len;
 
@@ -51,7 +51,7 @@ char	*ft_itoa(int n)
 	char		*s;
 
 	nbr = n;
-	i = static_intlen(nbr);
+	i = int_len(nbr);
 	s = malloc(i + 1);
 	if (!s)
 		return (NULL);
