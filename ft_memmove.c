@@ -6,7 +6,7 @@
 /*   By: jvets <jvets@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 20:19:52 by jvets             #+#    #+#             */
-/*   Updated: 2023/08/11 16:15:04 by jvets            ###   ########.fr       */
+/*   Updated: 2023/08/12 23:01:50 by jvets            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	if (destination > source)
 	{
-	i = n;
+		i = n;
 		while (i > 0)
 		{
 			i--;
